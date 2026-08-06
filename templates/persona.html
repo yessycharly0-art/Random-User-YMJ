@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Datos de la persona</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container center">
+        <h1>{{ persona.nombre }}</h1>
+
+        <img src="{{ persona.imagen }}" alt="Foto de {{ persona.nombre }}" class="foto">
+
+        <ul class="datos">
+            <li><strong>Género:</strong> {{ persona.gen }}</li>
+            <li><strong>País:</strong> {{ persona.pais }}</li>
+            <li><strong>Correo:</strong> {{ persona.correo }}</li>
+            <li><strong>Telefono:</strong> {{persona.telefono}}</li>
+            <li><strong>Direccion:</strong> {{persona.direccion}}</li>
+            <li><strong>Edad:</strong> {{persona.edad}}</li>
+
+        </ul>
+
+        <a href="{{ url_for('index') }}" class="btn">Generar otra persona</a>
+    </div>
+</body>
+</html>

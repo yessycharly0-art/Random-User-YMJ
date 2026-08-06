@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Generador de Personas</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container center">
+        <h1>Generador de Personas Ficticias</h1>
+        <p>Presiona el botón para obtener los datos de una persona aleatoria.</p>
+
+        {% if error %}
+            <p class="error">{{ error }}</p>
+        {% endif %}
+
+        <form action="/generar" method="POST">
+            <button type="submit" class="btn">Generar datos</button>
+        </form>
+    </div>
+</body>
+</html>
